@@ -1,0 +1,3 @@
+SELECT DISTINCT(COUNT(?User) AS ?Count) ?Item
+WHERE {{ ?User :purchased ?Item }}
+GROUPBY ?Item

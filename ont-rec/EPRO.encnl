@@ -1,0 +1,86 @@
+﻿Namespace: 'http://www.owl-ontologies.com/EPRO.owl'.
+
+Every review is something.
+Every user is something.
+User-D is a user.
+Iphone-Case[<http://www.owl-ontologies.com/EPRO.o#>] is an item.
+Positive is a sentiment.
+Apple is a brand.
+Iphonecase-Builtin-Screenprotector[<http://www.owl-ontologies.com/EPRO#>] is an aspect.
+Iphone is an item.
+Iphone-O-S[<http://www.owl-ontologies.com/EPRO.o#>] is an aspect.
+User-H is a user.
+Iphonecase-Raised-Bezel[<http://www.owl-ontologies.com/EPRO#>] is an aspect.
+Iphonecase-Texture-Grip[<http://www.owl-ontologies.com/EPRO#>] is an aspect.
+User-G is a user.
+User-C is a user.
+Iphone-Price[<http://www.owl-ontologies.com/EPRO.o#>] is an aspect.
+User-F is a user.
+User-B is a user.
+User-E is a user.
+Iphone-Battery[<http://www.owl-ontologies.com/EPRO.o#>] is an aspect.
+Iphone-Rear-Camera[<http://www.owl-ontologies.com/EPRO#>] is an aspect.
+User-A is a user.
+Negative is a sentiment.
+If an user is-purchased a thing(1) and the thing(1) is-bought-with a thing(2) and the user is-viewed the thing(2) then the thing(1) is a recommendation.
+If a thing(1) has-sentiment a thing(2) and the thing(1) has-aspect a thing(3) and the thing(3) has-sentiment the thing(2) then the thing(1) is a recommendation.
+Every-single-thing has-belong-to-brand nothing-but brands.
+Every-single-thing has-sentiment nothing-but sentiment.
+Every-single-thing is-purchased nothing-but items.
+Every-single-thing is-bought-with nothing-but items.
+Every-single-thing has-aspect nothing-but aspects.
+Every-single-thing is-mentioned nothing-but aspects.
+Every-single-thing is-viewed nothing-but items.
+Every user is-mentioned at-most five things.
+Every user is-purchased at-most five things.
+Every user is-mentioned nothing-but aspects.
+Every-single-thing has-belong-to-brand at-most one thing.
+Every-single-thing that has-belong-to-brand is an item.
+Every-single-thing that has-sentiment is an aspect and-or is an item.
+Every-single-thing has-sentiment at-most one thing.
+Every-single-thing is-purchased at-most one thing.
+Every-single-thing that is-purchased is a user.
+Every-single-thing that is-bought-with is an item.
+Every-single-thing is-bought-with at-most one thing.
+Every-single-thing that has-aspect is an item.
+Every-single-thing has-aspect at-most one thing.
+Every-single-thing that is-mentioned is a user.
+Every-single-thing is-mentioned at-most one thing.
+Every-single-thing is-viewed at-most one thing.
+Every-single-thing that is-viewed is a user.
+Iphone-Case[<http://www.owl-ontologies.com/EPRO.o#>] has-sentiment Positive.
+Iphone-Case[<http://www.owl-ontologies.com/EPRO.o#>] has-belong-to-brand Apple.
+Iphone-Case[<http://www.owl-ontologies.com/EPRO.o#>] has-aspect Iphonecase-Builtin-Screenprotector[<http://www.owl-ontologies.com/EPRO#>].
+Iphone-Case[<http://www.owl-ontologies.com/EPRO.o#>] is-bought-with Iphone.
+Iphonecase-Builtin-Screenprotector[<http://www.owl-ontologies.com/EPRO#>] has-sentiment Positive.
+Iphone has-belong-to-brand Apple.
+Iphone is-bought-with Iphone-Case[<http://www.owl-ontologies.com/EPRO.o#>].
+Iphone has-aspect Iphone-O-S[<http://www.owl-ontologies.com/EPRO.o#>].
+Iphone has-sentiment Positive.
+Iphone-O-S[<http://www.owl-ontologies.com/EPRO.o#>] has-sentiment Positive.
+User-D is-purchased Iphone-Case[<http://www.owl-ontologies.com/EPRO.o#>].
+Iphonecase-Raised-Bezel[<http://www.owl-ontologies.com/EPRO#>] has-sentiment Positive.
+Iphonecase-Texture-Grip[<http://www.owl-ontologies.com/EPRO#>] has-sentiment Positive.
+User-G is-purchased Iphone-Case[<http://www.owl-ontologies.com/EPRO.o#>].
+User-C is-purchased Iphone-Case[<http://www.owl-ontologies.com/EPRO.o#>].
+Iphone-Price[<http://www.owl-ontologies.com/EPRO.o#>] has-sentiment Positive.
+User-F is-purchased Iphone-Case[<http://www.owl-ontologies.com/EPRO.o#>].
+User-B is-viewed Iphone.
+User-B is-purchased Iphone-Case[<http://www.owl-ontologies.com/EPRO.o#>].
+User-B is-mentioned Iphonecase-Builtin-Screenprotector[<http://www.owl-ontologies.com/EPRO#>].
+User-E is-purchased Iphone-Case[<http://www.owl-ontologies.com/EPRO.o#>].
+Iphone-Battery[<http://www.owl-ontologies.com/EPRO.o#>] has-sentiment Positive.
+Iphone-Rear-Camera[<http://www.owl-ontologies.com/EPRO#>] has-sentiment Positive.
+User-A is-viewed Iphone-Case[<http://www.owl-ontologies.com/EPRO.o#>].
+User-A is-purchased Iphone.
+User-A is-mentioned Iphone-O-S[<http://www.owl-ontologies.com/EPRO.o#>].
+
+References:
+ [protege] 'http://protege.stanford.edu/plugins/owl/protege#'
+ [sqwrl] 'http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#' ('http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl')
+ [swrl] 'http://www.w3.org/2003/11/swrl#'
+ [swrla] 'http://swrl.stanford.edu/ontologies/3.3/swrla.owl#' ('http://swrl.stanford.edu/ontologies/3.3/swrla.owl')
+ [swrlb] 'http://www.w3.org/2003/11/swrlb#'
+ [xsp] 'http://www.owl-ontologies.com/2005/08/07/xsp.owl#'
+.
+
