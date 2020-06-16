@@ -1,0 +1,347 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:sqwrl="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://www.owl-ontologies.com/AMOntology.owl#"
+    xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+  xml:base="http://www.owl-ontologies.com/AMOntology.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/3.3/swrla.owl"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="Thread_shaft">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Part"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Revolute_Joint_Hole">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Part"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Afinia">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Machine"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Assembly">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="DesignFeature"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Revolute_Joint">
+    <rdfs:subClassOf rdf:resource="#Assembly"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Build_success">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="AdditiveManufacturingEvent"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="DesignParameter"/>
+  <owl:Class rdf:ID="Material"/>
+  <owl:Class rdf:ID="ThreadPitchClearance">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Thread"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Cleaning_success">
+    <rdfs:subClassOf rdf:resource="#AdditiveManufacturingEvent"/>
+  </owl:Class>
+  <owl:Class rdf:ID="FusedDepositionModeling">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Material_extrusion"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Support_structure">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Process_Parameter"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Material_extrusion">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Process_type"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Plastic">
+    <rdfs:subClassOf rdf:resource="#Material"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Part_Orientation">
+    <rdfs:subClassOf rdf:resource="#Process_Parameter"/>
+  </owl:Class>
+  <owl:Class rdf:ID="RadialClearance">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Circular"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Cleaning_failure">
+    <rdfs:subClassOf rdf:resource="#AdditiveManufacturingEvent"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Feature_plane_normal_X_vector">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Orientation_angles"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Thread_bore">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Part"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Build_failure">
+    <rdfs:subClassOf rdf:resource="#AdditiveManufacturingEvent"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Orientation_angles">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Build_Parameter"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Circular">
+    <rdfs:subClassOf rdf:resource="#DesignParameter"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Thread">
+    <rdfs:subClassOf rdf:resource="#Assembly"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Feature_plane_normal_Z_vector">
+    <rdfs:subClassOf rdf:resource="#Orientation_angles"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Feature_plane_normal_Y_vector">
+    <rdfs:subClassOf rdf:resource="#Orientation_angles"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Part">
+    <rdfs:subClassOf rdf:resource="#DesignFeature"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PLA">
+    <rdfs:subClassOf rdf:resource="#Plastic"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Build_Parameter">
+    <rdfs:subClassOf rdf:resource="#Process_Parameter"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Revolute_Joint_Screw">
+    <rdfs:subClassOf rdf:resource="#Part"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="limits">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Cleaning_success"/>
+          <owl:Class rdf:about="#RadialClearance"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#RadialClearance"/>
+          <owl:Class rdf:about="#Process_type"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isCreatedFrom">
+    <rdfs:domain rdf:resource="#ThreadPitchClearance"/>
+    <rdfs:range rdf:resource="#PLA"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="parameterizes">
+    <rdfs:domain rdf:resource="#RadialClearance"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Revolute_Joint"/>
+          <owl:Class rdf:about="#ThreadPitchClearance"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isBuiltOn">
+    <rdfs:domain rdf:resource="#ThreadPitchClearance"/>
+    <rdfs:range rdf:resource="#Afinia"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasPart">
+    <rdfs:domain rdf:resource="#Revolute_Joint"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Revolute_Joint_Hole"/>
+          <owl:Class rdf:about="#Revolute_Joint_Screw"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="usesProcessPlan">
+    <rdfs:domain rdf:resource="#Afinia"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#FusedDepositionModeling"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="hasUpperLimit">
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#time"
+          >3ha</rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="#Revolute_Joint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="unit">
+    <rdfs:domain rdf:resource="#RadialClearance"/>
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >mm</rdf:first>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="value">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+          >0.5</rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="#RadialClearance"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasLowerLimit">
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#time"
+          >-3ha</rdf:first>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#Revolute_Joint"/>
+  </owl:DatatypeProperty>
+  <Process_type rdf:ID="FDM_on_Afinia">
+    <limits>
+      <RadialClearance rdf:ID="radial_clearance">
+        <unit rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >mm</unit>
+        <parameterizes>
+          <Revolute_Joint rdf:ID="RevoluteJoint">
+            <hasLowerLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#time"
+            >-3ha</hasLowerLimit>
+            <hasUpperLimit rdf:datatype="http://www.w3.org/2001/XMLSchema#time"
+            >3ha</hasUpperLimit>
+            <hasPart>
+              <Revolute_Joint_Screw rdf:ID="screw"/>
+            </hasPart>
+            <hasPart>
+              <Revolute_Joint_Hole rdf:ID="hole"/>
+            </hasPart>
+          </Revolute_Joint>
+        </parameterizes>
+        <value rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >0.5</value>
+        <limits>
+          <Cleaning_success rdf:ID="Cs1"/>
+        </limits>
+      </RadialClearance>
+    </limits>
+  </Process_type>
+  <swrl:Imp rdf:ID="Rule-1">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="#Build_success"/>
+            <swrl:argument1>
+              <swrl:Variable rdf:ID="y"/>
+            </swrl:argument1>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:IndividualPropertyAtom>
+                        <swrl:argument2>
+                          <swrl:Variable rdf:ID="x"/>
+                        </swrl:argument2>
+                        <swrl:propertyPredicate rdf:resource="#parameterizes"/>
+                        <swrl:argument1>
+                          <swrl:Variable rdf:ID="a"/>
+                        </swrl:argument1>
+                      </swrl:IndividualPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:DatavaluedPropertyAtom>
+                            <swrl:argument1 rdf:resource="#a"/>
+                            <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                            >0.5</swrl:argument2>
+                            <swrl:propertyPredicate rdf:resource="#value"/>
+                          </swrl:DatavaluedPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:argument2>
+                      <swrl:Variable rdf:ID="b"/>
+                    </swrl:argument2>
+                    <swrl:argument1 rdf:resource="#a"/>
+                    <swrl:propertyPredicate rdf:resource="#limits"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument1 rdf:resource="#x"/>
+                <swrl:argument2>
+                  <swrl:Variable rdf:ID="z"/>
+                </swrl:argument2>
+                <swrl:propertyPredicate rdf:resource="#hasPart"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument1 rdf:resource="#x"/>
+            <swrl:propertyPredicate rdf:resource="#hasPart"/>
+            <swrl:argument2 rdf:resource="#y"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <Build_success rdf:ID="screw_build_success"/>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->
