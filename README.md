@@ -1,6 +1,6 @@
-### ont
-
 ##### Ontology code for Recommendations &amp; Prototyping projects.
+
+
 
 1. Explainable Product Recommendations with Semantics (SWRL)
 
