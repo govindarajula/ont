@@ -1,4 +1,4 @@
-#### Predictive ML models for Rapid Prototyping (3D Printing / Additive Manufacturing)
+#### Predictive ML models for Prototyping (3D Printing & Additive Manufacturing)
 
 * Developed a prediction system for prototyping complex geometries and evaluating tool parameters. 
 * The engineered model can store experimental knowledge and predictions from CAD model and tested as a guidance system for Julia 3D printer with successful builds of lag, cap screws.
