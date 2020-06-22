@@ -7,9 +7,7 @@
 * Developed a product recommendation system using Semantic Web rules.
 * Associates statistical recommendations along with explanation, to make the customer aware of **"why" the recommendation**.
 
-<img src="ont-rec/UIMER.JPG" height="300">
-
-<img src="preview.jpg" height="200"> 
+<img src="ont-rec/UIMER.JPG" width="400"> <img src="ont-rec/preview.jpg" width="400"> 
 
 
 ---
