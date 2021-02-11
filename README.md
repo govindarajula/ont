@@ -1,8 +1,8 @@
-##### Ontology code for Recommendations &amp; Prototyping projects.
+>  Ontology code for Recommendations &amp; Prototyping projects.
 
 
 
-1. Explainable Product Recommendations with Semantics (SWRL)
+#### 1. Explainable Product Recommendations with Semantics (SWRL)
 
 * Developed a product recommendation system using Semantic Web rules.
 * Associates statistical recommendations along with explanation, to make the customer aware of **"why" the recommendation**.
@@ -12,7 +12,7 @@
 
 ---
 
-2. Predictive ML models for Prototyping (3D Print & Additive Manufacturing)
+#### 2. Predictive ML models for Prototyping (3D Print & Additive Manufacturing)
 
 * Developed a prediction system for prototyping complex geometries and evaluating tool parameters. 
 * The engineered model can store experimental knowledge and predictions from CAD model and tested as a guidance system for Julia 3D printer with successful builds of lag, cap screws.
